@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ddd;
+}
+.homepage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+   
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 450px;
+    grid-template-areas: "image image image image"
+                        "payment payment payment payment";
+}
+.card .image{
+    grid-area: image;
+}
+.card .image img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card .payment{
+    grid-area: payment;
+    display: grid;
+    text-align: center;
+    background-color: #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+.card .payment h2{
+    font-size: 30px ;
+    margin: 30px 0;
+    color: #222;
+    font-weight: bold;
+} 
+.card .payment p{
+    line-height: 1.7;
+    color: #888;
+    font-size: 20px;
+    padding: 0 30px;
+    margin: 20px 0;
+}
+.card .payment .pay{
+    width: 80%;
+    background-color: #eee;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    align-items: center;
+    border-radius: 10px;
+}
+.card .payment .pay span{
+    display: block;
+    font-size: 18px;
+
+}
+.card .payment .pay .money{
+    color: #777;
+}
+.card .payment .pay  a{
+  color: #382ae1;
+  opacity: .5;
+  transition: all .4s ease-in-out;
+
+}
+.card .payment .pay  a:hover{
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.card .payment .buy{
+    width: 80%;
+    margin: auto;
+    padding: 15px ;
+    background-color: #382ae1;
+    color: #fff;
+    border-radius: 15px ;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: .5;
+    transition: all .4s ease-in-out;
+    border: none;
+    margin-bottom:20px ;
+}
+.card .payment .buy:hover{
+    opacity: 1;
+}
+.card .payment .cancel{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
